@@ -1,12 +1,85 @@
-# React + Vite
+# React Photo Gallery with CDN Images
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive photo gallery built with React and Vite that displays images from CDN sources with a clean, modern interface.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 🖼️ Responsive grid layout
+- 🔍 Modal view for full-size images
+- 🎨 Modern, attractive UI with hover effects
+- 📱 Mobile-friendly design
+- ⚡ Fast loading with CDN images
+- 🎯 Easy to customize and extend
 
-## Expanding the ESLint configuration
+## Project Structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```
+photo-gallery/
+├── public/
+│   └── index.html
+├── src/
+│   ├── components/
+│   │   ├── Gallery.jsx
+│   │   └── ImageModal.jsx
+│   ├── App.jsx
+│   ├── main.jsx
+│   └── App.css
+├── package.json
+└── vite.config.js
+```
+
+## Installation
+
+1. Clone or download the project files
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+3. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+4. Open your browser and navigate to the local server address (typically http://localhost:5173)
+
+## Customization
+
+### Adding Your Own Images
+
+Edit the `images` array in `src/components/Gallery.jsx`:
+
+```javascript
+const images = [
+  {
+    id: 1,
+    url: 'https://your-cdn-url.com/image1.jpg',
+    alt: 'Image description',
+    title: 'Image Title',
+    description: 'Image description text'
+  },
+  // Add more images as needed
+];
+```
+
+### Styling
+
+Modify the CSS in `src/App.css` to customize the appearance:
+- Change colors in the gradient
+- Adjust grid layout
+- Modify modal styling
+
+## Technologies Used
+
+- React 18
+- Vite
+- CSS3 with Flexbox/Grid
+- CDN images (from Picsum Photos in the example)
+
+## Build for Production
+
+```bash
+npm run build
+```
+
+This creates a `dist` folder with optimized production files.
