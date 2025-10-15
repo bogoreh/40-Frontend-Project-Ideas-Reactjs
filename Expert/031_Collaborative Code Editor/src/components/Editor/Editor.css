@@ -1,0 +1,136 @@
+.editor-wrapper {
+  flex: 1;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+.editor-wrapper.light {
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.editor-wrapper.dark {
+  background: rgba(30, 41, 59, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.editor-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.editor-tabs {
+  display: flex;
+  gap: 5px;
+}
+
+.tab {
+  padding: 8px 16px;
+  border-radius: 8px 8px 0 0;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.tab.active {
+  background: rgba(255, 255, 255, 0.2);
+  font-weight: 500;
+}
+
+.editor-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.action-button {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 6px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: transform 0.2s ease;
+}
+
+.action-button:hover {
+  transform: translateY(-1px);
+}
+
+.editor-content {
+  display: flex;
+  height: calc(100% - 60px);
+}
+
+.line-numbers {
+  padding: 15px 10px;
+  text-align: right;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  user-select: none;
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.editor-wrapper.light .line-numbers {
+  background: rgba(0, 0, 0, 0.05);
+  color: #666;
+}
+
+.editor-wrapper.dark .line-numbers {
+  background: rgba(0, 0, 0, 0.2);
+  color: #888;
+}
+
+.line-number {
+  padding: 0 8px;
+  min-height: 21px;
+}
+
+.code-input {
+  flex: 1;
+  padding: 15px;
+  border: none;
+  outline: none;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  resize: none;
+  background: transparent;
+  color: inherit;
+}
+
+.editor-wrapper.light .code-input {
+  color: #2d3748;
+}
+
+.editor-wrapper.dark .code-input {
+  color: #e2e8f0;
+}
+
+.code-input::placeholder {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+@media (max-width: 768px) {
+  .editor-header {
+    padding: 10px 15px;
+    flex-direction: column;
+    gap: 10px;
+    align-items: stretch;
+  }
+  
+  .editor-tabs {
+    justify-content: center;
+  }
+  
+  .editor-actions {
+    justify-content: center;
+  }
+}

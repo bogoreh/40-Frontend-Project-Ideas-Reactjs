@@ -1,0 +1,80 @@
+export const vehicles = [
+  {
+    id: 1,
+    name: "Delivery Van 01",
+    type: "Van",
+    driver: "John Smith",
+    location: "Downtown District",
+    status: "active",
+    speed: 45,
+    fuel: 78,
+    mileage: "45,230 km",
+    lastUpdate: "2 min ago",
+    position: { x: 25, y: 60 }
+  },
+  {
+    id: 2,
+    name: "Service Truck 02",
+    type: "Truck",
+    driver: "Maria Garcia",
+    location: "Industrial Zone",
+    status: "idle",
+    speed: 0,
+    fuel: 45,
+    mileage: "89,150 km",
+    lastUpdate: "5 min ago",
+    position: { x: 60, y: 40 }
+  },
+  {
+    id: 3,
+    name: "Executive Car 01",
+    type: "Sedan",
+    driver: "Robert Johnson",
+    location: "Financial District",
+    status: "active",
+    speed: 32,
+    fuel: 92,
+    mileage: "23,450 km",
+    lastUpdate: "1 min ago",
+    position: { x: 40, y: 30 }
+  },
+  {
+    id: 4,
+    name: "Maintenance Van 03",
+    type: "Van",
+    driver: "Sarah Wilson",
+    location: "Service Center",
+    status: "maintenance",
+    speed: 0,
+    fuel: 100,
+    mileage: "67,890 km",
+    lastUpdate: "1 hour ago",
+    position: { x: 75, y: 70 }
+  },
+  {
+    id: 5,
+    name: "Delivery Truck 04",
+    type: "Truck",
+    driver: "Mike Chen",
+    location: "Highway 101",
+    status: "active",
+    speed: 68,
+    fuel: 34,
+    mileage: "112,340 km",
+    lastUpdate: "3 min ago",
+    position: { x: 15, y: 20 }
+  },
+  {
+    id: 6,
+    name: "Inspection Car 02",
+    type: "SUV",
+    driver: "Lisa Brown",
+    location: "Residential Area",
+    status: "idle",
+    speed: 0,
+    fuel: 67,
+    mileage: "34,560 km",
+    lastUpdate: "8 min ago",
+    position: { x: 50, y: 80 }
+  }
+]

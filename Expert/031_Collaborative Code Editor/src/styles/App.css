@@ -1,0 +1,38 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+}
+
+.app.light {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.app.dark {
+  background: linear-gradient(135deg, #2c3e50 0%, #3498db 100%);
+}
+
+.app-content {
+  display: flex;
+  flex: 1;
+  height: calc(100vh - 70px);
+}
+
+.editor-container {
+  flex: 1;
+  display: flex;
+  padding: 20px;
+  transition: all 0.3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .app-content {
+    flex-direction: column;
+  }
+  
+  .editor-container {
+    padding: 10px;
+  }
+}
